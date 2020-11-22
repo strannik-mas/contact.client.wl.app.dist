@@ -4636,6 +4636,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _VLa
 
 /***/ }),
 
+/***/ "./node_modules/vuetify/lib/components/VLazy/VLazy.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VLazy/VLazy.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var D_domains_lmcrm_client_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ \"./node_modules/@babel/runtime/helpers/esm/objectSpread2.js\");\n/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixins/measurable */ \"./node_modules/vuetify/lib/mixins/measurable/index.js\");\n/* harmony import */ var _mixins_toggleable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/toggleable */ \"./node_modules/vuetify/lib/mixins/toggleable/index.js\");\n/* harmony import */ var _directives_intersect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../directives/intersect */ \"./node_modules/vuetify/lib/directives/intersect/index.js\");\n/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/mixins */ \"./node_modules/vuetify/lib/util/mixins.js\");\n/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/helpers */ \"./node_modules/vuetify/lib/util/helpers.js\");\n\n// Mixins\n\n // Directives\n\n // Utilities\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(_util_mixins__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(_mixins_measurable__WEBPACK_IMPORTED_MODULE_1__[\"default\"], _mixins_toggleable__WEBPACK_IMPORTED_MODULE_2__[\"default\"]).extend({\n  name: 'VLazy',\n  directives: {\n    intersect: _directives_intersect__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  },\n  props: {\n    options: {\n      type: Object,\n      // For more information on types, navigate to:\n      // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API\n      default: function _default() {\n        return {\n          root: undefined,\n          rootMargin: undefined,\n          threshold: undefined\n        };\n      }\n    },\n    tag: {\n      type: String,\n      default: 'div'\n    },\n    transition: {\n      type: String,\n      default: 'fade-transition'\n    }\n  },\n  computed: {\n    styles: function styles() {\n      return Object(D_domains_lmcrm_client_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({}, this.measurableStyles);\n    }\n  },\n  methods: {\n    genContent: function genContent() {\n      var slot = Object(_util_helpers__WEBPACK_IMPORTED_MODULE_5__[\"getSlot\"])(this);\n      /* istanbul ignore if */\n\n      if (!this.transition) return slot;\n      var children = [];\n      if (this.isActive) children.push(slot);\n      return this.$createElement('transition', {\n        props: {\n          name: this.transition\n        }\n      }, children);\n    },\n    onObserve: function onObserve(entries, observer, isIntersecting) {\n      if (this.isActive) return;\n      this.isActive = isIntersecting;\n    }\n  },\n  render: function render(h) {\n    return h(this.tag, {\n      staticClass: 'v-lazy',\n      attrs: this.$attrs,\n      directives: [{\n        name: 'intersect',\n        value: {\n          handler: this.onObserve,\n          options: this.options\n        }\n      }],\n      on: this.$listeners,\n      style: this.styles\n    }, [this.genContent()]);\n  }\n}));\n\n//# sourceURL=webpack:///./node_modules/vuetify/lib/components/VLazy/VLazy.js?");
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VLazy/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VLazy/index.js ***!
+  \************************************************************/
+/*! exports provided: VLazy, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _VLazy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VLazy */ \"./node_modules/vuetify/lib/components/VLazy/VLazy.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"VLazy\", function() { return _VLazy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_VLazy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack:///./node_modules/vuetify/lib/components/VLazy/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/vuetify/lib/components/VList/VList.js":
 /*!************************************************************!*\
   !*** ./node_modules/vuetify/lib/components/VList/VList.js ***!
